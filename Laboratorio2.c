@@ -43,7 +43,7 @@ void Setup (void) {
     ANSEL  = 0; // indica que los puertos son analogicos 
     ANSELH = 0; 
     
-    TRISB = 0b00011111;    //el puerto 2 y 3 son entradas
+    TRISB = 0b00000011;    //el puerto 2 y 3 son entradas
     PORTB = 0;
     
     TRISA = 0;  // indica que mi puerto es una salida y que limpia dicho puerto
@@ -68,11 +68,11 @@ char f = 1;
 
 void __interrupt() ISR(void){
     if (INTCONbits.RBIF == 1 && INTCONbits.RBIE == 1) {
-        if (PORTBbits.RB2 == 1) {
+        if (PORTBbits.RB0 == 1) {
             conta++;
         }
         
-        if (PORTBbits.RB3 == 1) {
+        if (PORTBbits.RB1 == 1) {
             conta--;
         }
     }
@@ -89,6 +89,6 @@ void main(void) {
     config_INTERR();
     
     while (1) {
-        PORTA = conta;
+        PORTD = conta;
     }
 }
