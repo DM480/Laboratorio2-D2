@@ -55,12 +55,6 @@ void Setup (void) {
 //******************************************************************************
 
 char conta = 0;
-char vadc;
-char masadc;
-char menadc;
-char multplex1;
-char multplex2;
-char f = 1;
 
 //******************************************************************************
 //                         CÓDIGO PRINCIPAL
