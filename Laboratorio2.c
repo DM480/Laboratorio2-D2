@@ -46,8 +46,8 @@ void Setup (void) {
     TRISB = 0b00000011;    //el puerto 2 y 3 son entradas
     PORTB = 0;
     
-    TRISA = 0;  // indica que mi puerto es una salida y que limpia dicho puerto
-    PORTA = 0; 
+    TRISD = 0;  // indica que mi puerto es una salida y que limpia dicho puerto
+    PORTD = 0; 
 }
 
 //******************************************************************************
