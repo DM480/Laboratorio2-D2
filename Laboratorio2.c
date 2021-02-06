@@ -43,7 +43,7 @@ void Setup (void) {
     ANSEL  = 0; // indica que los puertos son analogicos 
     ANSELH = 0; 
     
-    TRISB = 0B00001100;    //el puerto 2 y 3 son entradas
+    TRISB = 0b00011111;    //el puerto 2 y 3 son entradas
     PORTB = 0;
     
     TRISA = 0;  // indica que mi puerto es una salida y que limpia dicho puerto
