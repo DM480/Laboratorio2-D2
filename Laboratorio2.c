@@ -68,11 +68,11 @@ char f = 1;
 
 void __interrupt() ISR(void){
     if (INTCONbits.RBIF == 1 && INTCONbits.RBIE == 1) {
-        if (PORTBbits.RB6 == 1) {
+        if (PORTBbits.RB0 == 1) {
             conta++;
         }
         
-        if (PORTBbits.RB7 == 1) {
+        if (PORTBbits.RB1 == 1) {
             conta--;
         }
     }
